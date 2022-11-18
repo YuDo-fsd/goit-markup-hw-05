@@ -56,7 +56,7 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- BENEFITS -->
@@ -113,12 +113,42 @@
       </section>
       <!-- WHAT WE DO -->
       <section class="whatwedo section">
-        <div class="whatwedo-container container">
-          <h2 class="whatwedo-title section-title">Чим ми займаємося</h2>
-          <ul class="whatwedo-list list">
-            <li><img src="./images/codding.jpg" alt="Розробка додатків" width="370" /></li>
-            <li><img src="./images/mobile-codding.jpg" alt="Мобільна розробка" width="370" /></li>
-            <li><img src="./images/tab-graphics.jpg" alt="Графічний дизайн" width="370" /></li>
+        <div class="whatwedo__container container">
+          <h2 class="whatwedo__title section-title">Чим ми займаємося</h2>
+          <ul class="whatwedo__list list">
+            <li class="whatwedo__wrapper">
+              <img
+                class="whatwedo__img"
+                src="./images/codding.jpg"
+                alt="Розробка додатків"
+                width="370"
+              />
+              <div class="whatwedo__overlay-box">
+                <p class="whatwedo__overlay-text">Десктопні додатки</p>
+              </div>
+            </li>
+            <li class="whatwedo__wrapper">
+              <img
+                class="whatwedo__img"
+                src="./images/mobile-codding.jpg"
+                alt="Мобільна розробка"
+                width="370"
+              />
+              <div class="whatwedo__overlay-box">
+                <p class="whatwedo__overlay-text">Мобільні додатки</p>
+              </div>
+            </li>
+            <li class="whatwedo__wrapper">
+              <img
+                class="whatwedo__img"
+                src="./images/tab-graphics.jpg"
+                alt="Графічний дизайн"
+                width="370"
+              />
+              <div class="whatwedo__overlay-box">
+                <p class="whatwedo__overlay-text">Дизайнерські рішення</p>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -530,5 +560,16 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal data-modal-close>
+      <div class="modal">
+        <button class="modal__close-button" data-modal-close>
+          <svg class="modal__close-button-icon" width="18" height="18">
+            <use href="./images/icons/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
